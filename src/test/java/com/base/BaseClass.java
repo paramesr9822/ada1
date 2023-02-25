@@ -95,6 +95,10 @@ public class BaseClass {
 		return value;
 
 	}
+	public void pageloadtimeout() {
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
+	}
 
 	public void maximizewindow() {
 		driver.manage().window().maximize();
@@ -219,7 +223,7 @@ public class BaseClass {
 
 	public void jssetattribute(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].setAttribute('value',’Ranjith’)", element);
+		js.executeScript("arguments[0].setAttribute('value',â€™Ranjithâ€™)", element);
 	}
 
 	public void jsgetattribute(WebElement element) {
